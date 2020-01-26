@@ -1,1 +1,43 @@
-body {background-image: url("710b50229cea1ec2df2498d98948f5b6_s.jpg"); }
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.scroll-area {
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  -webkit-scroll-behavior: smooth;
+  scroll-behavior: smooth;
+  -webkit-scroll-snap-type: mandatory;
+  scroll-snap-type: mandatory;
+  -webkit-scroll-snap-points-y: repeat(100%);
+  scroll-snap-points-y: repeat(100%);
+}
+.box {
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  font-size: 100px;
+  display: flex;
+  align-items: center; /* 縦方向中央揃え */
+  justify-content: center; /* 横方向中央揃え */
+  flex-direction: column;
+}
+.box__bg_black {
+  background-color: #333;
+}
+.box__bg_gray {
+  background-color: #ccc;
+}
+.box__bg_photo {
+  background-image: url(710b50229cea1ec2df2498d98948f5b6_s.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+p {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
