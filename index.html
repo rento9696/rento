@@ -186,7 +186,49 @@
 
 
 
-                         
+                          <script type="text/javascript">
+                          $(function(){
+                            $('#open_embed').on('click',function(){
+                              $("#mediaembed").toggle();
+                            });
+                          });
+                          </script>
+                          <p id="open_embed">埋め込みコード・リンク</p>
+                          <div id="mediaembed" class="media bio_section">
+                            <h3>埋め込みコード:</h3>
+
+                            <script type="text/javascript">
+                            $(function(){
+                              var user_id = 13;
+                              $("#user_embed_text").html(<br>リンクコード:<textarea style="width:100%;">http://share-videos.se/auto/video/49979687?uid='+user_id+'</textarea><br>  埋め込みコード:<textarea style="width:100%;"><iframe src="https://embed.share-videos.se/auto/embed/49979687?uid='+user_id+'" frameborder=0 width=100% height=480 scrolling=no allowFullScreen></iframe></textarea>');
+                              $("#makelink").html('<a href="https://login_n.share-videos.se/login_user_page/makelink?svurl=49979687">リンクを作成する</a>');
+                            });
+                            </script>
+                            <p id="user_embed_code"></p>
+                            <div id="user_embed_text"></div>
+
+                                                          <h3 id="makelink"></h3>
+                              
+                          </div>
+
+
+
+                        
+                    </div>
+                </div>
+
+                <div class="col-sm-3 sidebar sidebar2">
+                    <div class="row m0 sidebar_row_inner">
+
+
+
+                      
+                        <!--Sponsored Area-->
+                        <div class="row m0 widget widget_sponsored_area">
+                            <div class="row m0 inner">
+                                <div class="row m0">
+                                    <div class="inner row m0">
+
 
 
                                                                              
