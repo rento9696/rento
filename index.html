@@ -314,33 +314,6 @@
 
 
 
-        var append_html="";
-        append_html+='<article class="col-sm-3 col-xs-6 video_post postType1">';
-          append_html+='<div class="inner row m0">';
-            append_html+='<a href="https://share-videos.se/auto/video/'+data_relates.datas[i].sv_id+'?uid=13"><div class="row screencast m0">';
-              append_html+='<img src="https://img.share-videos.se/imgs/'+data_relates.datas[i].sv_id.substr(-2)+'/'+data_relates.datas[i].sv_id+'/6_.jpg" alt="" class="cast img-responsive">';
-              append_html+='<div class="play_btn"></div>';
-              append_html+='<div class="media-length">'+min+'分</div>';
-              append_html+='<div class="media-tags">'+data_relates.datas[i].tags+'</div>';
-              append_html+='</div>';
-            append_html+='</a>';
-          append_html+='</div>';
-        append_html+='</article>';
-        $('#related_videos').append(append_html);
-
-      }
-    });
-  })
-    .always(function() {
-              $('ul#video_tag').append('<li><a href="https://www.youtube.com/channel/UCRXaSl_hz_0YQFGWRatg4Mw" target="_blank">提供元</a></li>');
-            });
-
-
-});
-</script>
-
-
-
 <footer class="row">
     <div class="container">
         <div class="row sidebar sidebar_footer">
