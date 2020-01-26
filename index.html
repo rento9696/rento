@@ -100,9 +100,7 @@
                         タクマッチー関連
                     </a>
                     <ul class="dropdown-menu">
-                      <li>
-                        <a href="http://login.share-videos.se/auto_report">ログイン</a>
-                      </li>
+                     
                         
                             
                         
@@ -265,79 +263,7 @@
 
 
 
-    <section class="row">
-        <ul class="nav nav-justified ribbon">
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-        </ul>
-    </section> <!--Ribbon-->
-
-
-<script type="text/javascript" src="https://tag.share-videos.se/pages/view_log/?id=49979687"></script>
-
-
-
-
-<script type="text/javascript">
-$(function(){
-
-  var jqxhr = $.get("https://search.share-videos.se/json/movie_tag?svid=49979687&site=sv", function(data) {
-    var obj = $.parseJSON(data);
-    var tags="";
-    for (var i = 0; i < obj.length; i++) {
-      $('ul#video_tag').append('<li><a href="https://share-videos.se/search/'+encodeURIComponent(obj[i])+'">'+obj[i]+'</a></li>');
-      tags+=obj[i]+" ";
-    }
-    $('title').html(tags);
-    //start get related videos.
-    if(!tags){
-      var tagrandom = Math.random() * 4;
-      if(tagrandom==0){
-        tags = '中出し';
-      }else if(tagrandom==1){
-        tags = 'ギャル';
-      }else if(tagrandom==2){
-        tags = 'スレンダー';
-      }else if(tagrandom==3){
-        tags = 'コスプレ';
-      }else{
-        tags = '熟女';
-      }
-    }
-    $.get("https://search.share-videos.se/json/related?words="+encodeURIComponent(tags)+"&t=now3", function(data_relates){
-      for (var i = 0; i < data_relates.datas.length; i++) {
-        // console.log(data_relates.datas[i].sv_id);
-        var min=Math.round(data_relates.datas[i].video_long/60);
-
-
-        var append_html="";
-        append_html+='<article class="col-sm-3 col-xs-6 video_post postType1">';
-          append_html+='<div class="inner row m0">';
-            append_html+='<a href="https://share-videos.se/auto/video/'+data_relates.datas[i].sv_id+'?uid=13"><div class="row screencast m0">';
-              append_html+='<img src="https://img.share-videos.se/imgs/'+data_relates.datas[i].sv_id.substr(-2)+'/'+data_relates.datas[i].sv_id+'/6_.jpg" alt="" class="cast img-responsive">';
-              append_html+='<div class="play_btn"></div>';
-              append_html+='<div class="media-length">'+min+'分</div>';
-              append_html+='<div class="media-tags">'+data_relates.datas[i].tags+'</div>';
-              append_html+='</div>';
-            append_html+='</a>';
-          append_html+='</div>';
-        append_html+='</article>';
-        $('#related_videos').append(append_html);
-
-      }
-    });
-  })
-    .always(function() {
-              $('ul#video_tag').append('<li><a href="http://video.fc2.com/a/content/20131028NxzxT2yb" target="_blank">ソース元</a></li>');
-            });
-
-
-});
-</script>
+ 
 
 
 
