@@ -311,36 +311,7 @@
 
 
 
-<script type="text/javascript">
-$(function(){
 
-  var jqxhr = $.get("https://search.share-videos.se/json/movie_tag?svid=49979687&site=sv", function(data) {
-    var obj = $.parseJSON(data);
-    var tags="";
-    for (var i = 0; i < obj.length; i++) {
-      $('ul#video_tag').append('<li><a href="https://share-videos.se/search/'+encodeURIComponent(obj[i])+'">'+obj[i]+'</a></li>');
-      tags+=obj[i]+" ";
-    }
-    $('title').html(tags);
-    //start get related videos.
-    if(!tags){
-      var tagrandom = Math.random() * 4;
-      if(tagrandom==0){
-        tags = '中出し';
-      }else if(tagrandom==1){
-        tags = 'ギャル';
-      }else if(tagrandom==2){
-        tags = 'スレンダー';
-      }else if(tagrandom==3){
-        tags = 'コスプレ';
-      }else{
-        tags = '熟女';
-      }
-    }
-    $.get("https://search.share-videos.se/json/related?words="+encodeURIComponent(tags)+"&t=now3", function(data_relates){
-      for (var i = 0; i < data_relates.datas.length; i++) {
-        // console.log(data_relates.datas[i].sv_id);
-        var min=Math.round(data_relates.datas[i].video_long/60);
 
 
         var append_html="";
@@ -361,7 +332,7 @@ $(function(){
     });
   })
     .always(function() {
-              $('ul#video_tag').append('<li><a href="http://video.fc2.com/a/content/20131028NxzxT2yb" target="_blank">ソース元</a></li>');
+              $('ul#video_tag').append('<li><a href="https://www.youtube.com/channel/UCRXaSl_hz_0YQFGWRatg4Mw" target="_blank">提供元</a></li>');
             });
 
 
